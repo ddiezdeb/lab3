@@ -3,6 +3,15 @@ import java.util.List;
 
 interface StringChecker { boolean checkString(String s); }
 
+class StringCheckerKey implements StringChecker 
+{
+  @Override
+  public boolean checkString(String s)
+  {
+    return s.contains("Key");
+  }
+
+}
 class ListExamples {
 
   // Returns a new list that has all the elements of the input list for which
@@ -40,7 +49,7 @@ class ListExamples {
     }
     while(index2 < list2.size()) {
       result.add(list2.get(index2));
-      index1 += 1;
+      index2 += 1;   //index1 to index2
     }
     return result;
   }

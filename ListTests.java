@@ -12,10 +12,9 @@ public class ListTests{
     first.add("Key");
     first.add("Keystone");
 
-    StringChecker check = new StringChecker(); 
+    StringChecker check = new StringCheckerKey(); 
     List<String> result = ListExamples.filter(first, check);
     List<String> expected = new ArrayList<>();
-
     expected.add("Key");
     expected.add("Keystone");
     assertEquals(expected, result);
