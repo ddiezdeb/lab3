@@ -32,8 +32,10 @@ public class ArrayExamples {
       if(num < lowest) { lowest = num; }
     }
     double sum = 0;
+    boolean excluded = false;  //tracks if lowest is excluded yet
     for(double num: arr) {
-      if(num != lowest) { sum += num; }
+      if(num != lowest || excluded) { sum += num; }
+        if(num == lowest) {excluded = true;}
     }
     return sum / (arr.length - 1);
   }
